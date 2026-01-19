@@ -14,3 +14,16 @@ core-rpi5/home-assistant/home-assistant.log*
 core-rpi5/home-assistant/home-assistant_v2.db*
 core-rpi5/home-assistant/blueprints/
 core-rpi5/mosquitto/data/
+# Home Assistant runtime / state (do not commit)
+core-rpi5/home-assistant/home-assistant.log*
+core-rpi5/home-assistant/*.db
+core-rpi5/home-assistant/*.db-*
+core-rpi5/home-assistant/.HA_VERSION
+core-rpi5/home-assistant/.ha_run.lock
+
+# Secrets (keep local)
+core-rpi5/home-assistant/secrets.yaml
+
+# Mosquitto runtime/data (adjust if used)
+core-rpi5/mosquitto/data/
+core-rpi5/mosquitto-data/
