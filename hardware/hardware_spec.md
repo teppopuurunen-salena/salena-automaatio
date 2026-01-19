@@ -1,3 +1,19 @@
+# Lisää legacy-huomautus tiedoston alkuun (safe prepend)
+tmpfile="$(mktemp)"
+cat > "$tmpfile" <<'EOF'
+> **Huomautus – legacy-dokumentti**
+>
+> Tämä tiedosto sisältää varhaisia laitteisto-oletuksia ja luonnoksia.
+> Ajantasainen arkkitehtuuri ja suunnittelupäätökset löytyvät dokumenteista:
+>
+> - `docs/architecture.md`
+> - `docs/current_state.md`
+>
+> Tämä tiedosto säilytetään historiallisena viitteenä.
+
+EOF
+cat hardware/hardware_spec.md >> "$tmpfile"
+mv "$tmpfile" hardware/hardware_spec.md
 # Tekniset tiedot - Salena AU v5.0
 
 ## 1. Verkkotopologia (IPv4)
